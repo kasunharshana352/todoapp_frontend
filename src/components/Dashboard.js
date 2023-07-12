@@ -264,6 +264,10 @@ function Dashboard() {
               ))}
             </tbody>
           </table>
+              <br />
+          <br />
+          <br />
+          <br />
         </>
       )}
       {showPopup && (
