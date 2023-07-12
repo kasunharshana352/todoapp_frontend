@@ -1,0 +1,101 @@
+.dashboard {
+  margin-top: 80px;
+  padding: 20px;
+}
+
+.dashboard h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dashboard__form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.dashboard__input {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.dashboard__textarea {
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.dashboard__button {
+  background-color: #701505;
+  color: #fff;
+  border: 1px solid black;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.dashboard__button:hover {
+  background-color: #ff4737;
+}
+
+.dashboard__button:active {
+  background-color: #ff3127;
+}
+
+.dashboard__message {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.dashboard__table-heading {
+  font-size: 20px;
+  margin-bottom: 10px;
+  height: 50px; /* Set the desired height for the table heading cells */
+  width: 200px; /* Set the desired width for the table heading cells */
+}
+
+.dashboard__table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #84a9cc;
+}
+
+.dashboard__table th {
+  background-color: #600909;
+  color: #fff;
+  padding: 10px;
+  border: 1px solid #000;
+  width: 200px; /* Set the desired width for the table data cells */
+}
+
+.dashboard__table td {
+  background-color: #c2c2c2;
+  color: #000000;
+  padding: 10px;
+  border: 1px solid #000;
+  width: 200px; /* Set the desired width for the table data cells */
+}
+
+.dashboard__task-button {
+  flex-grow: 1; /* Expand to fill available space */
+  background-color: #701505;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  margin-right: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.5s ease;
+}
+
+.dashboard__task-button:hover {
+  background-color: #ff4737;
+}
+
+.dashboard__task-button:active {
+  background-color: #ff3127;
+}
