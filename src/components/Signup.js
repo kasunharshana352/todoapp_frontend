@@ -18,7 +18,16 @@ function Signup() {
         email,
         password,
       });
+      const { token } = response.data;
+      // Store the token in local storage
+      await localStorage.setItem("token", token);
       console.log(response.data); // Handle the response as needed
+
+      // Redirect to the profile page
+      navigate("/profile");
+
+      // Reload the page
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }
