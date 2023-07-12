@@ -6,19 +6,18 @@ function Signup() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
+  const serverURL = process.env.REACT_APP_SERVER_URL;
+
   const handleSignup = async (e) => {
     console.log("submit");
     e.preventDefault();
     try {
       // Make a POST request to your backend signup endpoint
-      const response = await axios.post(
-        "http://localhost:3001/api/auth/signup",
-        {
-          username,
-          email,
-          password,
-        }
-      );
+      const response = await axios.post(`${serverURL}/api/auth/signup`, {
+        username,
+        email,
+        password,
+      });
       console.log(response.data); // Handle the response as needed
     } catch (error) {
       console.error(error);
