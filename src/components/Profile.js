@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 
+const serverURL = process.env.REACT_APP_SERVER_URL;
+
 function Profile() {
   const [user, setUser] = useState(null);
   const location = useLocation();
@@ -16,14 +18,11 @@ function Profile() {
   const fetchUserProfile = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await axios.get(
-        "http://localhost:3001/api/auth/profile",
-        {
-          headers: {
-            Authorization: token,
-          },
-        }
-      );
+      const response = await axios.get(`${serverURL}/api/auth/profile`, {
+        headers: {
+          Authorization: token,
+        },
+      });
       setUser(response.data);
     } catch (error) {
       console.error(error);
